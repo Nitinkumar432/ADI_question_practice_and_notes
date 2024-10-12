@@ -1,0 +1,56 @@
+Introduction to Hash Table
+A Hash Table is a data structure used to store key-value pairs. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. The hash table enables fast retrieval of data in O(1) time on average.
+
+Key Components:
+Hash Function: A function that maps keys to an index in the hash table. A good hash function ensures that the keys are evenly distributed across the hash table to minimize collisions.
+Bucket: The slot or location in the array where the data is stored.
+Collision: A situation where two keys are mapped to the same index by the hash function. Collisions need to be handled to maintain data integrity.
+Collision Avoidance Strategies
+Collision occurs when two or more keys are hashed to the same index in the hash table. Several strategies exist to handle collisions:
+
+Linear Probing:
+
+If a collision occurs, the next free slot in the hash table is found by linearly probing (i.e., checking the next slots in the array).
+Formula: (hash(key) + i) % tableSize, where i starts from 0 and increments until an empty slot is found.
+Quadratic Probing:
+
+Instead of linearly probing, we probe slots using a quadratic function, i.e., checking positions at quadratic intervals.
+Formula: (hash(key) + i^2) % tableSize.
+Separate Chaining:
+
+In this method, each bucket in the hash table points to a linked list. All elements that hash to the same bucket are stored in the linked list.
+When a collision occurs, the new item is appended to the list in that bucket.
+
+
+1. Linear Probing Analogy:
+Scenario: You’re in a parking lot with numbered parking spots, and you have a designated parking spot based on your parking ticket. However, when you arrive, you find that someone else has parked in your spot.
+
+Linear Probing Solution: You look for the next available parking spot in a linear sequence. You check the next parking spot, and if it’s full, you keep checking the next spot until you find an empty one.
+
+Formula: (hash(key) + i) % tableSize, where i increments until an empty slot is found.
+
+Real-life example:
+
+You have parking spot #12, but it’s occupied. You check spot #13 (next in line), and if it’s also taken, you check spot #14, and so on until you find a free spot.
+
+
+2. Quadratic Probing Analogy:
+Scenario: The same parking lot situation where your designated parking spot is occupied. Instead of checking the next spot in a straight line, you decide to check spots based on a pattern.
+
+Quadratic Probing Solution: Instead of checking the next spot in a linear fashion, you skip to spots based on a quadratic pattern (e.g., check the next spot, then the spot after skipping 2 spaces, then after skipping 4 spaces, etc.).
+
+Formula: (hash(key) + i²) % tableSize, where i is the number of steps in the quadratic pattern.
+
+Real-life example:
+
+Your spot #12 is taken, so you check spot #13 (1² spaces away), if that’s taken, you check spot #15 (2² spaces away), then spot #19 (3² spaces away), and so on.
+
+
+3. Separate Chaining Analogy:
+Scenario: Imagine you go to a post office to collect a package. The packages are stored in lockers, and each locker has a unique number (hash). However, multiple people may have packages stored in the same locker (collision).
+
+Separate Chaining Solution: Instead of trying to find another locker (like in probing), the post office stores multiple packages in the same locker by organizing them neatly inside the locker using a list.
+
+Real-life example:
+
+Locker #12 already has a package for someone else. The post office still places your package in the same locker but stores it in an organized manner. When someone comes to retrieve their package, the clerk checks the locker and hands out the correct package from the list inside.

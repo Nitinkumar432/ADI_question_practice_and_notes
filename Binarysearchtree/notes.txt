@@ -1,0 +1,77 @@
+What is a Binary Search Tree (BST)?
+A Binary Search Tree (BST) is a special type of binary tree that maintains a specific order among its nodes, enabling efficient search, insertion, and deletion operations.
+
+Properties of a BST:
+Node Structure: Each node in a BST has a maximum of two children, referred to as the left and right children. Each node contains:
+
+A value (val)
+A reference to its left child (left)
+A reference to its right child (right)
+Ordering:
+
+For any given node:
+Left Subtree: All nodes in the left subtree have values less than the node’s value.
+Right Subtree: All nodes in the right subtree have values greater than the node’s value.
+This property holds true for all nodes in the tree, ensuring that both the left and right subtrees are also BSTs.
+No Duplicates: A typical BST does not allow duplicate values. Each value must be unique within the tree.
+
+Operations and Time Complexity:
+Search:
+
+Time Complexity: 
+𝑂
+(
+ℎ
+)
+O(h) where 
+ℎ
+h is the height of the tree.
+In the best case (balanced tree), the time complexity is 
+𝑂
+(
+log
+⁡
+𝑛
+)
+O(logn).
+In the worst case (degenerate tree), the time complexity is 
+𝑂
+(
+𝑛
+)
+O(n).
+Insertion:
+
+Time Complexity: 
+𝑂
+(
+ℎ
+)
+O(h)
+Insertions are performed similarly to searches; we traverse the tree to find the correct position for the new node.
+Deletion:
+
+Time Complexity: 
+𝑂(ℎ)
+O(h)
+Deletion involves finding the node to be deleted and then rearranging the tree to maintain the BST properties.
+Advantages of Using a BST:
+Dynamic Size: Unlike arrays, BSTs can grow and shrink dynamically as elements are added or removed.
+Ordered Data: BSTs allow in-order traversal, which results in a sorted sequence of values.
+Example Structure of a BST:
+Here’s a visual representation of a BST:
+
+markdown
+Copy code
+       10
+      /  \
+     5    15
+    / \   / \
+   3   7 12  20
+In this tree:
+The left child of 10 is 5, which is less than 10.
+The right child of 10 is 15, which is greater than 10.
+This ordering property is maintained throughout the tree.
+ special properlty
+
+ inorder traversal of bst gives a sorted sequence

@@ -1,0 +1,22 @@
+heap is complete binary tree
+:
+binary tree is called which tree has atmost two children
+
+complete binary tree: a complete binary tree every node should have two children except leave of binary start from left side ok 
+it statifs heap property
+
+max heap:
+
+  always root have max value and children value less than root
+  min heap :
+   always root have min value and children value greater than root
+if node is n in cbt(complete binary tree) then height is log(n);
+
+
+max heap
+node -i
+parent(i)=i/2
+left side: (2*i)
+right: 2*i+1;
+
+//insertion in max-heap 
