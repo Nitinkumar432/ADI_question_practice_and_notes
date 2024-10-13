@@ -1,4 +1,4 @@
-package GreedyAlgo;
+package customcomparator;
 import java.util.*;
 public class customcomparator {
     public static void main(String[] args) {
