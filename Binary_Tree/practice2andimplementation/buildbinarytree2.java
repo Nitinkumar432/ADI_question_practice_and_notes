@@ -1,11 +1,11 @@
-package Binary_Tree.practice2;
+package Binary_Tree.practice2andimplementation;
 import java.util.*;
 public class buildbinarytree2 {
     static class node{
         int val;
         node left;
         node right;
-         node(int val){
+        node(int val){
             this.val=val;
             left=null;
             right=null;

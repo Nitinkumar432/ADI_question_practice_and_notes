@@ -1,4 +1,4 @@
-package Binary_Tree.practice2;
+package Binary_Tree.practice2andimplementation;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -46,7 +46,7 @@ public class buildingtreewithoutone {
                     qu.add(curr.right);
                 }
             }
-            return root; // Return the constructed tree
+            return root;
         }
 
         static int heightofbt(node root) {
@@ -61,7 +61,7 @@ public class buildingtreewithoutone {
 
     public static void main(String[] args) {
         buildtree bt = new buildtree();
-        node root = bt.createtree(); // Get the root node from createtree
+        node root = bt.createtree();
         System.out.println("Height of the binary tree: " + bt.heightofbt(root));
     }
 }
